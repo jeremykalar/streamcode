@@ -5,12 +5,14 @@ public class game {
 	public static int[] player2 = { 0, 0 };
 	public static boolean player = false;
 	public static int heal = 0;
+	public static int magic = 0;
+	public static int damage = 0;
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		int turnlimit = input.nextInt();
 		player();
-		for (int i = 0; i <= turnlimit + 1; i++) {
+		for (int i = 0; i <= turnlimit; i++) {
 			turn(input);
 		}
 		input.close();
@@ -60,37 +62,13 @@ public class game {
 	}
 
 	public static void magic(Scanner input, int magic) {
-		int magiccost = 0;
-		int damage = 0;
-		if (magic == 50) {
-			System.out.println("Fireball");
+		//spell(magic);
+		spellcast(input);
 
+		if (magic >= magic) {
+			attack();
 		}
-		String cast = input.next();
-
-		if (cast == "fireball") {
-			magiccost = 100;
-			damage = 250;
-		} else if (cast == "metor") {
-			magiccost = 50;
-			damage = 100;
-		} else if (cast == "") {
-			magiccost = 50;
-			damage = 100;
-		} else if (cast == "") {
-			magiccost = 50;
-			damage = 100;
-		} else if (cast == "") {
-			magiccost = 50;
-			damage = 100;
-		} else if (cast == "") {
-			magiccost = 50;
-			damage = 100;
-		}
-
-		if (magic == magiccost) {
-			attack(magiccost, damage);
-		} else {
+		if (magic < magic) {
 			System.out.println("you do not have enough to attack");
 		}
 		if (player == false) {
@@ -103,14 +81,121 @@ public class game {
 		}
 	}
 
-	public static void attack(int magiccost, int attackdamage) {
+	public static void spellcast(Scanner input) {
+		String cast = input.next();
+		if (cast == "fireball") {
+			magic = 100;
+			damage = 250;
+		}
+		if (cast == "metor") {
+			magic = 50;
+			damage = 100;
+		}
+		if (cast == "lighting") {
+			magic = 25;
+			damage = 75;
+		}
+		if (cast == "Ray Beam") {
+			magic = 80;
+			damage = 100;
+		}
+		if (cast == "Darkness Flow") {
+			magic = 30;
+			damage = 50;
+		}
+		if (cast == "heal") {
+			magic = 0;
+			damage = -100;
+		}
+		if (cast == "Minion  Stepper") {
+			magic = 30;
+			damage = 50;
+		}
+		if (cast == "Cursed Chaos") {
+			magic = 80;
+			damage = 100;
+		}
+		if (cast == "Swift Attack") {
+			magic = 0;
+			damage = 20;
+		}
+		if (cast == "Hungry Muncher") {
+			magic = 50;
+			damage = 65;
+		}
+		if (cast == "Heavy Metal") {
+			magic = 60;
+			damage = 85;
+		}
+		if (cast == "Acid Poison") {
+			magic = 55;
+			damage = 75;
+		}
+		if (cast == "Heavy Impact") {
+			magic = 20;
+			damage = 45;
+		}
+		if (cast == "Icy Waves") {
+			magic = 75;
+			damage = 100;
+		}
+		if (cast == "Earthquake") {
+			magic = 60;
+			damage = 85;
+		}
+		if (cast == "Bullseye") {
+			magic = 70;
+			damage = 100;
+		}
+		if (cast == "Explosive Punch") {
+			magic = 55;
+			damage = 75;
+		}
+		if (cast == "Tornado") {
+			magic = 65;
+			damage = 45;
+		}
+		if (cast == "Hyper Kick") {
+			magic = 30;
+			damage = 55;
+		}
+		if (cast == "Scary Whisper") {
+			magic = 35;
+			damage = 60;
+		}
+		if (cast == "Stone Breaker") {
+			magic = 65;
+			damage = 95;
+		}
+
+		if (cast == "exit") {
+			System.exit(0);
+		}
+
+	}
+
+	public static void spell(int magic) {
+		if (magic == 50) {
+			System.out.print("Fireball");
+			System.out.print("metor");
+			System.out.print("lighting");
+			System.out.print("");
+			System.out.print("");
+			System.out.print("heal");
+		}
+
+	}
+
+	public static void attack() {
 		if (player == false) { // player1 is attacking
-			player1[1] = -magiccost;
-			player2[0] = -attackdamage;
+			player1[1] = -magic;
+			player2[0] = -damage;
+			damage = 0;
 		}
 		if (player == true) { // player2 is attacking
-			player2[1] = -magiccost;
-			player1[0] = -attackdamage;
+			player2[1] = -magic;
+			player1[0] = -damage;
+			damage = 0;
 		}
 	}
 
