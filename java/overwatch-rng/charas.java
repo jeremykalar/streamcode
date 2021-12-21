@@ -4,25 +4,24 @@ import java.util.Scanner;
 public class charas {
 	static Random rand = new Random();
 	static Scanner scan = new Scanner(System.in);
+	
 
-	public static void overwatch(String role)  {
-		
-		char t = 't';
-		char d = 'd';
-		char s = 's';
-		String input = "test";
+	public static String overwatch(String role)  {
+		StringBuilder input;
+		char[] cArr = new char[]{'t','d','s'};
 		int number = rand.nextInt(8);
 		String output = "test";
 		output = output + number;
 		if(role == "tanks") {
-			input = t + output;
+			 input = new StringBuilder(number);
+			 input.append(cArr);
 		} else if(role == "dps")
 		{
-			input = d + output;
+			//input = d + output;
 		}
 		else if(role == "support")
 		{
-			input = s + output;
+			//input = s + output;
 		}
 		System.out.println(input);
 		System.out.println(number);
@@ -35,7 +34,7 @@ public class charas {
 		String t6 = "windston";
 		String t7 = "Wreking ball";
 		String t8 = "zarya";
-		
+
 		//dps
 		String d1 = "Ashe";
 		String d2 = "Bastion";
@@ -63,17 +62,20 @@ public class charas {
 		String s5 = "Mercy";
 		String s6 = "Moira";
 		String s7 = "Zenyatta";
+		return input;
 	}
-	
-	
-	
+
+
+
 
 	public static void main(String[] args) {
+		String end;
 		System.out.print("Enter the role you would like to receive a hero for? ");
 		String role = scan.nextLine(); 
 		System.out.println("Here is what you entered: " + role); 
 		System.out.println();
-		overwatch(role);
+		end = overwatch(role);
+		System.out.println(end);
 	}
 
 }
