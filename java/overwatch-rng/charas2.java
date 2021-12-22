@@ -74,9 +74,12 @@ public class charas2 {
 	}
 
 	public static void main(String[] args) {
-		String role = print();
+		String role = "dps";
+	//	role = print();
 		arry();
-
+if (role != "tanks" || role != "dps" || role != "suppot") 
+{ System.out.println("ERROR");
 		overwatch(role);
 	}
+}
 }
