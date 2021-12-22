@@ -7,7 +7,7 @@ public class charas2 {
 	static String[] t = new String[8];
 	static String[] d = new String[17];
 	static String[] s = new String[7];
-	
+
 	public static void arry() {
 		// tanks
 		t[0] = "d.va";
@@ -47,43 +47,36 @@ public class charas2 {
 		s[5] = "Moira";
 		s[6] = "Zenyatta";
 
-	
-		
 	}
 
 	public static void overwatch(String role) {
-		
-		//int number = rand.nextInt(8);
-		if (role == "tanks") {
-			for(int i = 0; i < t.length; i++) {
+		// should be print out the arrays above
+		// int number = rand.nextInt(8);
+		String tanks = "tanks";
+		String dps = "dps";
+		String support = "support";
+		if (role == tanks) {
+			for (int i = 0; i < 6; i++) {
 				System.out.println(t[i]);
-			}
-		}
-		if (role == "dps") {
-			for(int i = 0; i < d.length; i++) {
 				System.out.println(d[i]);
-			}
-		}
-		if (role == "support") {
-			for(int i = 0; i < s.length; i++) {
 				System.out.println(s[i]);
-				}
 			}
 
-		//System.out.println(input);
-		
-		//return output;
+		}
 	}
 
-	public static void main(String[] args) {
+	public static String print() {
 		System.out.print("Enter the role you would like to receive a hero for? ");
 		String role = scan.nextLine();
 		System.out.println("Here is what you entered: " + role);
 		System.out.println();
-		arry();
-		overwatch(role);
-	
-
+		return role;
 	}
 
+	public static void main(String[] args) {
+		String role = print();
+		arry();
+
+		overwatch(role);
+	}
 }
