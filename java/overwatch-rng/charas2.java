@@ -6,8 +6,8 @@ public class charas2 {
 	static Scanner scan = new Scanner(System.in);
 	static String[] t =  {"d.va", "orisa","reinheart", "Roadhog","Sigma","windston", "Wreking ball","zarya"};
 	static String[] d = { "Ashe", "Bastion", "Cassidy", "Echo", "Doomfist", "Genji", "Hanzo", "Junkrat", "Mei",
-			"Pharah", "Reaper", "Soldier: 76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker" };
-	static String[] s = { "Ana","Baptiste","Brigitte","Lúcio", "Mercy", "Moira", "Zenyatta",};
+			"Pharah", "Reaper", "Soldier: 76", "Sombra", "Symmetra", "Torbjï¿½rn", "Tracer", "Widowmaker" };
+	static String[] s = { "Ana","Baptiste","Brigitte","Lï¿½cio", "Mercy", "Moira", "Zenyatta",};
 
 
 

@@ -50,7 +50,7 @@ public class charas {
 		String d12 = "Soldier: 76";
 		String d13 = "Sombra";
 		String d14 = "Symmetra";
-		String d15 = "Torbjörn";
+		String d15 = "Torbjï¿½rn";
 		String d16 = "Tracer";
 		String d17 = "Widowmaker";
 
@@ -58,7 +58,7 @@ public class charas {
 		String s1 = "Ana";
 		String s2 = "Baptiste";
 		String s3 = "Brigitte";
-		String s4 = "Lúcio";
+		String s4 = "Lï¿½cio";
 		String s5 = "Mercy";
 		String s6 = "Moira";
 		String s7 = "Zenyatta";
