@@ -7,6 +7,7 @@ public class routes {
 
 	public static int number() {
 		number = rand.nextInt(10);
+		System.out.println(number);
 		return number;
 	}
 	

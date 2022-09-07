@@ -1,8 +1,6 @@
 package homework;
 
 import java.util.Scanner;
-import homework.*;
-import path.*;
 public class game {
 	static String heroname;
 	static Scanner input = new Scanner(System.in);
@@ -10,10 +8,10 @@ public class game {
 
 	public static void main(String[] args) {
 		//name();
-		//path();
-		//int test = routes.number();
+		routes.number();
 		//System.out.println(test);
 		path.path();
+		stop.stop();
 	}
 
 
