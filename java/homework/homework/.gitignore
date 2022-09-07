@@ -1,2 +1,5 @@
 /game.class
 /routes.class
+/path.class
+/exit.class
+/stop.class
