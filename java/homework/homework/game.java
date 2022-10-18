@@ -11,7 +11,7 @@ public class game {
 		routes.number();
 		//System.out.println(test);
 		path.path();
-		stop.stop();
+		//stop.stop();
 	}
 
 
