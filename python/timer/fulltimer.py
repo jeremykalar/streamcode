@@ -1,10 +1,19 @@
 from timer import *
 from stopwatch import *
+import sys
 
-which_time = input("what timer do you need? (please put timer for a countdown or stopwatch)")
+def which_time():
+    return input("What timer do you need? (Please enter 'timer' for a countdown or 'stopwatch'): ")
 
-
-if which_time == "timer":
-    start()
-if which_time == "stop":
-    start_stopwatch()
+for i in range(11):
+    time_type = which_time()
+    if time_type == "timer":
+        start()
+    elif time_type == "stopwatch":
+        start_stopwatch()
+    elif i == 11:
+        print("To many attepts")
+        sys.exit()
+    else:
+        print("Invalid input, please try again.")
+        print(i)
